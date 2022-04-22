@@ -1,0 +1,17 @@
+ssh -i "myjenkinsmar2.pem" ubuntu@ec2-54-187-183-72.us-west-2.compute.amazonaws.com
+
+
+docker run -d -p 9000:9000 --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /opt/portainer:/data portainer/portainer
+
+
+
+
+https://april132022.s3.us-west-2.amazonaws.com/mahaLogin-1.0.war
+
+
+
+
+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
+
+
+

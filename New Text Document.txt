@@ -1,0 +1,16 @@
+on mastr
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+on node
+kubeadm join 172.31.30.50:6443 --token 790r93.wjk1ut08g9emhdp7 \
+        --discovery-token-ca-cert-hash sha256:984a7eeed5a1bae45ff0c098c7e4f7fb8d73c3c8a2b3fe730ac56b0e74268aac
+
+
+
+
+
+
+
+kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
